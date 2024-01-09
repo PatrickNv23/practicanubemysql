@@ -31,9 +31,7 @@
 
         $conexion = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'), "BASEDATOS");
 
-        $cadenaSQL = "SELECT Agenda.*, Distrito.descripcion AS distrito
-        FROM Agenda
-        JOIN Distrito ON Agenda.distrito_id = Distrito.id";
+        $cadenaSQL = "SELECT agenda.*, distrito.descripcion AS distrito FROM agenda JOIN distrito ON agenda.distrito_id = distrito.id";
 
         $resultado = mysqli_query($conexion, $cadenaSQL);
 
