@@ -21,7 +21,7 @@ CREATE TABLE distrito (
 
 ALTER TABLE agenda
 ADD COLUMN distrito_id INT,
-ADD FOREIGN KEY (distrito_id) REFERENCES Distrito(id);
+ADD FOREIGN KEY (distrito_id) REFERENCES distrito(id);
 
 INSERT INTO distrito VALUES ('1', 'Miraflores');
 INSERT INTO distrito VALUES ('2', 'Los olivos');
